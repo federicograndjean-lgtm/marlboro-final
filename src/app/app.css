@@ -1,0 +1,146 @@
+/* Estilos Base */
+.marlboro-container {
+  background-color: #f0f0f0;
+  min-height: 100vh;
+  font-family: 'Times New Roman', serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+}
+
+/* El Bloque Rojo y el Logo (Siempre arriba) */
+.chevron-top {
+  width: 100%;
+  height: 300px;
+  background-color: #ce1126;
+  clip-path: polygon(0 0, 100% 0, 100% 75%, 50% 100%, 0 75%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  z-index: 10;
+}
+
+.content-text {
+  text-align: center;
+  margin-top: -30px;
+}
+
+.brand {
+  font-size: 8rem;
+  font-weight: bold;
+  color: #fff;
+  margin: 0;
+  letter-spacing: -5px;
+}
+
+.slogan {
+  letter-spacing: 12px;
+  font-size: 1.2rem;
+  color: #fff;
+  font-weight: bold;
+  margin-top: -15px;
+}
+
+/* Contenido Principal (Baja para no superponerse) */
+.inicio-content, .nosotros-content {
+  margin-top: 50px; /* Espacio para que baje de la 'V' */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  position: relative;
+  z-index: 5;
+}
+
+/* Sección Inicio */
+.box-label {
+  border: 3px solid #1a1a1a;
+  background-color: #fff;
+  display: inline-block;
+  padding: 10px 30px;
+  font-weight: 900;
+  letter-spacing: 2px;
+  color: #1a1a1a;
+  margin-top: 30px;
+}
+
+.box-macho {
+  margin-top: 60px;
+  text-align: center;
+  max-width: 600px;
+}
+
+.box-macho h2 {
+  font-size: 2.2rem;
+  text-transform: uppercase;
+  font-weight: bold;
+  color: #1a1a1a;
+}
+
+.box-macho p {
+  font-size: 1.2rem;
+  color: #555;
+  margin-bottom: 30px;
+}
+
+/* Botón Macho */
+.btn-macho {
+  background-color: #1a1a1a;
+  color: white;
+  border: none;
+  padding: 18px 50px;
+  font-family: 'Times New Roman', serif;
+  font-weight: bold;
+  font-size: 1.1rem;
+  letter-spacing: 3px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.btn-macho:hover {
+  background-color: #333;
+  transform: scale(1.05);
+}
+
+/* Sección Nosotros (Tarjeta Gaucha) */
+.tarjeta-gaucha {
+  background-color: white;
+  padding: 50px;
+  border: 2px solid #1a1a1a;
+  box-shadow: 15px 15px 0px #ce1126; /* Sombra roja sólida */
+  text-align: center;
+  max-width: 550px;
+}
+
+.tarjeta-gaucha h2 {
+  color: #ce1126;
+  font-size: 3rem;
+  margin-bottom: 0;
+}
+
+.texto-agresivo {
+  font-size: 1.4rem;
+  line-height: 1.6;
+  color: #1a1a1a;
+  font-weight: bold;
+  margin-top: 30px;
+}
+
+.firma {
+  font-style: italic;
+  color: #777;
+  margin-top: 40px;
+}
+
+.btn-volver {
+  margin-top: 30px;
+  background: none;
+  border: 1px solid #ce1126;
+  color: #ce1126;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-weight: bold;
+}

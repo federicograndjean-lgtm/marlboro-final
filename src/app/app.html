@@ -1,0 +1,32 @@
+<div class="marlboro-container">
+  <div class="chevron-top">
+    <div class="content-text">
+      <h1 class="brand">Marlboro</h1>
+      <p class="slogan">LONG LIVE THE LEGEND</p>
+    </div>
+  </div>
+
+  <div *ngIf="paginaActual === 'inicio'" class="inicio-content">
+    <div class="box-label">20 CLASS A CIGARETTES</div>
+    
+    <div class="box-macho">
+      <h2>SANGRE GAUCHA. CORAZÓN DE FIERRO.</h2>
+      <p>Acá no hay vueltas. Es el sabor del hombre que no pide permiso.</p>
+      <button class="btn-macho" (click)="irANosotros()">SOBRE NOSOTROS</button>
+    </div>
+  </div>
+
+  <div *ngIf="paginaActual === 'nosotros'" class="nosotros-content">
+    <div class="tarjeta-gaucha">
+      <h2>¿QUIÉNES SOMOS?</h2>
+      <hr>
+      <p class="texto-agresivo">
+        Somos la Pampa indomable. Somos el facón que corta la duda. 
+        Representamos al gaucho de ley, al macho que no se dobla ante nadie.
+        No vendemos humo, vendemos carácter. 
+      </p> 
+      <p class="firma" >Marlboro: El sabor del hombre argentino.</p>
+      <button class="btn-volver" (click)="irAInicio()">VOLVER</button>
+    </div>
+  </div>
+</div>
