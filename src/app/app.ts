@@ -1,22 +1,10 @@
-import { Component } from '@angular/core';
-import { CommonModule } from '@angular/common';
+// Agregá esta variable arriba con las otras
+filtroVecino: string = '';
 
-@Component({
-  selector: 'app-root',
-  standalone: true,
-  imports: [CommonModule],
-  templateUrl: './app.html',
-  styleUrls: ['./app.css']
-})
-export class AppComponent {
-  // Con esto el HTML sabe qué mostrar
-  paginaActual: string = 'inicio';
-
-  irANosotros() {
-    this.paginaActual = 'nosotros';
-  }
-
-  irAInicio() {
-    this.paginaActual = 'inicio';
-  }
+// Y esta función (getter) que es la que va a usar el HTML
+get tramitesFiltrados() {
+  return this.tramites.filter(t => 
+    t.vecino.toLowerCase().includes(this.filtroVecino.toLowerCase()) ||
+    t.pedido.toLowerCase().includes(this.filtroVecino.toLowerCase())
+  );
 }

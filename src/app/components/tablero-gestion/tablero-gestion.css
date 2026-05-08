@@ -1,0 +1,145 @@
+/* Contenedor Principal */
+.gestion-container {
+  max-width: 900px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  color: #333;
+}
+
+.header-federal {
+  text-align: center;
+  margin-bottom: 30px;
+  border-bottom: 3px solid #741d1d; /* Rojo federal */
+  padding-bottom: 10px;
+}
+
+.header-federal h2 {
+  margin: 0;
+  color: #741d1d;
+  font-weight: 800;
+}
+
+/* Formulario de Carga */
+.card-formulario {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  margin-bottom: 30px;
+}
+
+.input-group {
+  margin-bottom: 15px;
+}
+
+.input-group label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.input-group input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box; /* Para que no se pase del borde */
+}
+
+.btn-cargar {
+  background-color: #741d1d;
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+  width: 100%;
+  transition: background 0.3s;
+}
+
+.btn-cargar:hover {
+  background-color: #a02828;
+}
+
+/* Tarjetas de Trámite */
+.grid-tramites {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.card-tramite {
+  background: white;
+  padding: 15px;
+  border-radius: 8px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+  transition: transform 0.2s;
+}
+
+.card-tramite:hover {
+  transform: scale(1.01);
+}
+
+/* Colores de Estado (Borde izquierdo grueso) */
+.Pendiente {
+  border-left: 8px solid #d9534f; /* Rojo */
+}
+
+.En.Proceso {
+  border-left: 8px solid #f0ad4e; /* Naranja */
+}
+
+.Completado {
+  border-left: 8px solid #5cb85c; /* Verde */
+}
+
+/* Textos e Info */
+.info-tramite h4 {
+  margin: 5px 0;
+  font-size: 1.2em;
+}
+
+.badge-id {
+  background: #eee;
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-size: 0.8em;
+  color: #666;
+}
+
+.pedido-texto {
+  color: #555;
+  margin: 5px 0;
+}
+
+/* Botones de Acción */
+.acciones-gestion button {
+  padding: 8px 12px;
+  margin-left: 5px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.btn-proceso { background-color: #f0ad4e; color: white; }
+.btn-exito { background-color: #5cb85c; color: white; }
+
+.check-final {
+  color: #5cb85c;
+  font-weight: bold;
+  font-style: italic;
+}
+
+.separador {
+  margin: 40px 0;
+  border: 0;
+  border-top: 1px solid #eee;
+}

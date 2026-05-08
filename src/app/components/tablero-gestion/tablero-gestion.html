@@ -1,0 +1,50 @@
+<div class="gestion-container">
+  <div class="header-federal">
+    <h2>🏛️ PANEL DE GESTIÓN ADMINISTRATIVA</h2>
+    <p>Tafí Viejo - Corazón de Fierro</p>
+  </div>
+
+  <div class="card-formulario">
+    <h3>📝 Registrar Nuevo Pedido</h3>
+    <div class="input-group">
+      <label>Vecino / Solicitante:</label>
+      <input type="text" [(ngModel)]="nuevoVecino" placeholder="Ej: Juan Pérez">
+    </div>
+    
+    <div class="input-group">
+      <label>Detalle del Trámite:</label>
+      <input type="text" [(ngModel)]="nuevoPedido" placeholder="Ej: Pedido de luminaria">
+    </div>
+
+    <button class="btn-cargar" (click)="agregarTramite()">
+      Cargar al Sistema
+    </button>
+  </div>
+
+  <hr class="separador">
+
+  <div class="listado-seccion">
+    <h3>📋 Estado de Trámites Actuales</h3>
+    
+    <div class="grid-tramites">
+      <div *ngFor="let t of tramites" class="card-tramite" [ngClass]="t.estado">
+        <div class="info-tramite">
+          <span class="badge-id">#{{ t.id }}</span>
+          <h4>{{ t.vecino }}</h4>
+          <p class="pedido-texto">{{ t.pedido }}</p>
+          <p class="estado-label">Estado: <strong>{{ t.estado }}</strong></p>
+        </div>
+
+        <div class="acciones-gestion">
+          <button class="btn-proceso" (click)="actualizarEstado(t.id, 'En Proceso')" *ngIf="t.estado === 'Pendiente'">
+            ⚙️ Iniciar
+          </button>
+          <button class="btn-exito" (click)="actualizarEstado(t.id, 'Completado')" *ngIf="t.estado !== 'Completado'">
+            ✅ Finalizar
+          </button>
+          <span class="check-final" *ngIf="t.estado === 'Completado'">🏆 Trámite Terminado</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
